@@ -1,4 +1,4 @@
-package top.lihugang.mc.mod.client.utils;
+package top.lihugang.mc.mod.mcfetch.client.utils;
 
 public class timeFormatter {
     public static String format(long time) {

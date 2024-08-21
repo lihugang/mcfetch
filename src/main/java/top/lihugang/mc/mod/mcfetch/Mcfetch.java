@@ -1,8 +1,8 @@
-package top.lihugang.mc.mod;
+package top.lihugang.mc.mod.mcfetch;
 
 import net.fabricmc.api.ModInitializer;
 
-public class mcfetch implements ModInitializer {
+public class Mcfetch implements ModInitializer {
 
     @Override
     public void onInitialize() {

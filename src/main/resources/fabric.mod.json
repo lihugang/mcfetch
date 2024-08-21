@@ -4,17 +4,17 @@
   "version": "${version}",
   "name": "mcfetch",
   "description": "A mod to fetch client info",
-  "authors": ["lihugang"],
+  "authors": [],
   "contact": {},
   "license": "GPL-3.0",
   "icon": "assets/mcfetch/icon.png",
   "environment": "client",
   "entrypoints": {
     "client": [
-      "top.lihugang.mc.mod.client.mcfetchClient"
+      "top.lihugang.mc.mod.mcfetch.client.McfetchClient"
     ],
     "main": [
-      "top.lihugang.mc.mod.mcfetch"
+      "top.lihugang.mc.mod.mcfetch.Mcfetch"
     ]
   },
   "mixins": [

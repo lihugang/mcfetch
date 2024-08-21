@@ -1,4 +1,4 @@
-package top.lihugang.mc.mod.client.utils.gameInfoCollector;
+package top.lihugang.mc.mod.mcfetch.client.utils.gameInfoCollector;
 
 import net.fabricmc.loader.api.metadata.ModMetadata;
 import net.minecraft.client.MinecraftClient;
@@ -7,7 +7,7 @@ import net.fabricmc.loader.api.ModContainer;
 
 import java.util.*;
 
-import top.lihugang.mc.mod.client.utils.timeFormatter;
+import top.lihugang.mc.mod.mcfetch.client.utils.timeFormatter;
 
 public class fabricGameInfoCollector {
     public static List<AbstractMap.SimpleEntry<String, String>> collect(long startTime) {

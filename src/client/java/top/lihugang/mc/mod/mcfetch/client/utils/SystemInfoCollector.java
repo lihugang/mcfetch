@@ -1,4 +1,4 @@
-package top.lihugang.mc.mod.client.utils;
+package top.lihugang.mc.mod.mcfetch.client.utils;
 
 import java.awt.*;
 import java.util.AbstractMap;
@@ -27,7 +27,7 @@ public class SystemInfoCollector {
         Runtime runtime = Runtime.getRuntime();
 
         info.add(
-                new AbstractMap.SimpleEntry<>("CPU", runtime.availableProcessors() + "x " + hardwareInfo.getProcessor().getProcessorIdentifier().getName())
+                new AbstractMap.SimpleEntry<>("CPU", runtime.availableProcessors() + "x " + System.getProperty("PROCESSOR_IDENTIFIER"))
         );
 
         long totalMemory = runtime.totalMemory();
@@ -38,7 +38,7 @@ public class SystemInfoCollector {
         );
 
         info.add(
-                new AbstractMap.SimpleEntry<>("GPU", hardwareInfo.getGraphicsCards().getFirst().getName() + " " + hardwareInfo.getGraphicsCards().getFirst().getVersionInfo())
+                new AbstractMap.SimpleEntry<>("GPU", hardwareInfo.getGraphicsCards().get(0).getName() + " " + hardwareInfo.getGraphicsCards().get(0).getVersionInfo())
         );
 
         try {

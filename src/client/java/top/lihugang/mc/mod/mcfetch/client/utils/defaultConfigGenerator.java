@@ -1,4 +1,4 @@
-package top.lihugang.mc.mod.client.utils;
+package top.lihugang.mc.mod.mcfetch.client.utils;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -8,10 +8,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
-import org.slf4j.Logger;
-
 public class defaultConfigGenerator {
-    static public void generate(Logger logger) {
+    static public void generate() {
         Map<String, String> icons = new TreeMap<>();
 
         File
@@ -20,8 +18,6 @@ public class defaultConfigGenerator {
         if (!configDirectory.exists()) {
             if (!configRoot.exists()) configRoot.mkdir();
             configDirectory.mkdir();
-
-            logger.warn("Default config directory does not exist.");
 
             // In the font of Minecraft, # occupies 6 units, <space> occupies 4 units
             icons.put("fabric", ""
@@ -52,12 +48,8 @@ public class defaultConfigGenerator {
                     BufferedWriter writer = new BufferedWriter(new FileWriter("./config/mcfetch/" + key));
                     writer.write(icons.get(key));
                     writer.close();
-                } catch (Exception exception) {
-                    logger.error("Failed to create config file: {}", key);
-                    logger.error(exception.getMessage());
-                }
+                } catch (Exception ignored) {}
             }
-            logger.info("Generating default config file successfully.");
-        } else logger.info("Config directory exists, default config file generating skipped.");
+        }
     }
 }

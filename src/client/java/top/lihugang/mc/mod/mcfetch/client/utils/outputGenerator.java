@@ -1,4 +1,4 @@
-package top.lihugang.mc.mod.client.utils;
+package top.lihugang.mc.mod.mcfetch.client.utils;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
