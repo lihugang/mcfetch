@@ -11,8 +11,7 @@ import org.slf4j.Logger;
 import top.lihugang.mc.mod.mcfetch.utils.timeFormatter;
 
 public class neoforgeGameInfoCollector {
-    public static char colorSymbol = 0xa7; // It seems that NeoForge does not support utf-8 characters in the source code
-    public static List<AbstractMap.SimpleEntry<String, String>> collect(long startTime, Logger logger) {
+    public static List<AbstractMap.SimpleEntry<String, String>> collect(long startTime) {
         List<AbstractMap.SimpleEntry<String, String>> info = new ArrayList<>();
         List<IModInfo> mods = ModList.get().getMods();
         Minecraft client = Minecraft.getInstance();
@@ -20,7 +19,7 @@ public class neoforgeGameInfoCollector {
         assert client.player != null;
         String playerName = client.player.getName().getString();
         info.add(
-                new AbstractMap.SimpleEntry<>("(hide)playerName", colorSymbol + "c" + playerName)
+                new AbstractMap.SimpleEntry<>("(hide)playerName", "§c" + playerName)
         );
 
         info.add(
@@ -39,7 +38,7 @@ public class neoforgeGameInfoCollector {
 
         info.add(
                 new AbstractMap.SimpleEntry<>("(hide)MinecraftInfo",
-                         colorSymbol + "cMinecraft " + minecraftVersion + " (neoforge)"
+                         "§cMinecraft " + minecraftVersion + " (neoforge)"
                 )
         );
 

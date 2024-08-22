@@ -9,7 +9,6 @@ import java.util.List;
 import java.util.Scanner;
 
 public class outputGenerator {
-    public static char colorSymbol = 0xa7; // It seems that NeoForge does not support utf-8 characters in the source code
     public static String generate(String modLoader, List<List<AbstractMap.SimpleEntry<String, String>>> info) {
         StringBuilder builder = new StringBuilder();
 
@@ -23,8 +22,7 @@ public class outputGenerator {
             String iconFilePath = "./config/mcfetch/" + modLoader;
             Scanner scanner = new Scanner(new FileReader(iconFilePath));
             for (AbstractMap.SimpleEntry<String, String> object: flattedInfo) {
-                builder.append(colorSymbol);
-                builder.append('f');
+                builder.append("§f");
                 if (scanner.hasNextLine()) {
                     String thisLineIcon = scanner.nextLine();
                     builder.append(thisLineIcon);
@@ -32,11 +30,9 @@ public class outputGenerator {
                 }
                 String key = object.getKey(), value = object.getValue();
                 if (!key.startsWith("(hide)")) {
-                    builder.append(colorSymbol);
-                    builder.append('c');
+                    builder.append("§c");
                     builder.append(key);
-                    builder.append(colorSymbol);
-                    builder.append('f');
+                    builder.append("§f");
                     builder.append(": ");
                 }
                 builder.append(value);

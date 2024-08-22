@@ -9,8 +9,6 @@ import oshi.SystemInfo;
 import oshi.hardware.HardwareAbstractionLayer;
 
 public class SystemInfoCollector {
-    public static char colorSymbol = 0xa7; // It seems that NeoForge does not support utf-8 characters in the source code
-    public static char blockSymbol = 0x2588;
     public static List<AbstractMap.SimpleEntry<String, String>> collect() {
         List<AbstractMap.SimpleEntry<String, String>> info = new ArrayList<>();
 
@@ -55,30 +53,10 @@ public class SystemInfoCollector {
         } catch (Exception ignored) {}
 
         info.add(
-                new AbstractMap.SimpleEntry<>("(hide)color-row1",
-                        "" +
-                                colorSymbol + '0' + blockSymbol +
-                                colorSymbol + '4' + blockSymbol +
-                                colorSymbol + '2' + blockSymbol +
-                                colorSymbol + '6' + blockSymbol +
-                                colorSymbol + '1' + blockSymbol +
-                                colorSymbol + '5' + blockSymbol +
-                                colorSymbol + '3' + blockSymbol +
-                                colorSymbol + '7' + blockSymbol
-                )
+                new AbstractMap.SimpleEntry<>("(hide)color-row1", "§0█§4█§2█§6█§1█§5█§3█§7█")
         );
         info.add(
-                new AbstractMap.SimpleEntry<>("(hide)color-row1",
-                        "" +
-                                colorSymbol + '8' + blockSymbol +
-                                colorSymbol + 'c' + blockSymbol +
-                                colorSymbol + 'a' + blockSymbol +
-                                colorSymbol + 'e' + blockSymbol +
-                                colorSymbol + '9' + blockSymbol +
-                                colorSymbol + 'd' + blockSymbol +
-                                colorSymbol + 'b' + blockSymbol +
-                                colorSymbol + 'f' + blockSymbol
-                )
+                new AbstractMap.SimpleEntry<>("(hide)color-row2", "§8█§c█§a█§e█§9█§d█§b█§f█")
         );
 
         return info;

@@ -41,7 +41,7 @@ public class Mcfetch {
 
             event.getDispatcher().register(
                     Commands.literal(MODID).executes(context -> {
-                        List<AbstractMap.SimpleEntry<String, String>> gameInfo = neoforgeGameInfoCollector.collect(minecraftStartTime, LOGGER);
+                        List<AbstractMap.SimpleEntry<String, String>> gameInfo = neoforgeGameInfoCollector.collect(minecraftStartTime);
                         List<AbstractMap.SimpleEntry<String, String>> sysInfo = SystemInfoCollector.collect();
 
                         List<List<AbstractMap.SimpleEntry<String, String>>> list = new ArrayList<>();
