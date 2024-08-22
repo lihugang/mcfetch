@@ -1,4 +1,4 @@
-package top.lihugang.mc.mod.client.utils;
+package top.lihugang.mc.mod.mcfetch.utils;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -45,6 +45,25 @@ public class defaultConfigGenerator {
                             .concat("                              \n")
                             .concat("                              \n")
                             .concat("                              \n")
+            );
+
+            icons.put("neoforge", ""
+                    .concat("                           \n")
+                    .concat("         §8ss   ss§f         \n")
+                    .concat("      §8s§7ss§8s   §8s§7ss§8s      \n")
+                    .concat("   §6ss§8mm§6ssssss§8mm§6ss   \n")
+                    .concat("   §6ssssmmmmmmssss   \n")
+                    .concat("   §6smmmmmmmmmmmms   \n")
+                    .concat("   §6ss§fhh§6hhhhhh§fhh§6ss   \n")
+                    .concat("§6ssss§fh§0O§6ssssss§0O§fh§6ssss\n")
+                    .concat("   §6syyyyyyyyyyyys   \n")
+                    .concat("   §6ssss§fhh§0yy§fhh§6ssss   \n")
+                    .concat("         §6ssssss         \n")
+                    .concat("                           \n")
+                    .concat("                           \n")
+                    .concat("                           \n")
+                    .concat("                           \n")
+                    .concat("                           \n")
             );
 
             for (String key: icons.keySet()) {

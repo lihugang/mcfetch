@@ -1,4 +1,4 @@
-package top.lihugang.mc.mod.client.utils;
+package top.lihugang.mc.mod.mcfetch.utils;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class outputGenerator {
+    public static char colorSymbol = 0xa7; // It seems that NeoForge does not support utf-8 characters in the source code
     public static String generate(String modLoader, List<List<AbstractMap.SimpleEntry<String, String>>> info) {
         StringBuilder builder = new StringBuilder();
 
@@ -22,17 +23,20 @@ public class outputGenerator {
             String iconFilePath = "./config/mcfetch/" + modLoader;
             Scanner scanner = new Scanner(new FileReader(iconFilePath));
             for (AbstractMap.SimpleEntry<String, String> object: flattedInfo) {
+                builder.append(colorSymbol);
+                builder.append('f');
                 if (scanner.hasNextLine()) {
                     String thisLineIcon = scanner.nextLine();
                     builder.append(thisLineIcon);
-//                    builder.deleteCharAt(builder.length() - 1); // remove the last '\n'
                     builder.append("   "); // The length of the spaces is as the same as neofetch results
                 }
                 String key = object.getKey(), value = object.getValue();
                 if (!key.startsWith("(hide)")) {
-                    builder.append("§c");
+                    builder.append(colorSymbol);
+                    builder.append('c');
                     builder.append(key);
-                    builder.append("§f");
+                    builder.append(colorSymbol);
+                    builder.append('f');
                     builder.append(": ");
                 }
                 builder.append(value);
