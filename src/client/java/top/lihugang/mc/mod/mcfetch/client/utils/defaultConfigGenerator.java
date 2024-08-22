@@ -62,6 +62,27 @@ public class defaultConfigGenerator {
                     .concat("                           \n")
             );
 
+			icons.put("quilt", ""
+				.concat("   §5####   §d####   §b####   \n")
+				.concat("   §5####§0--§d####§0--§b####   \n")
+				.concat("   §5####   §d####   §b####   \n")
+				.concat("      §8||       ||||       ||      \n")
+				.concat("   §d####   §b####   §9####   \n")
+				.concat("   §d####§0--§b####§0--§9####   \n")
+				.concat("   §d####   §b####   §9####   \n")
+				.concat("      §8||       ||||       ||      \n")
+				.concat("   §5####   §9####            \n")
+				.concat("   §5####§0--§9####      §5##   \n")
+				.concat("   §5####   §9####   §5######\n")
+				.concat("                        §5##   \n")
+				.concat("                              \n")
+				.concat("                              \n")
+				.concat("                              \n")
+				.concat("                              \n")
+				.concat("                              \n")
+				.concat("                              \n")
+			);
+
             for (String key: icons.keySet()) {
                 try {
                     BufferedWriter writer = new BufferedWriter(new FileWriter("./config/mcfetch/" + key));
