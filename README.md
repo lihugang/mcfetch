@@ -1,9 +1,10 @@
 # MC Fetch
 It is a mod to fetch Minecraft client information like neofetch.
 
-It supports Minecraft 1.16.5+ and it requires **fabric loader** and **fabric api**.  
+It supports Minecraft 1.16.5+ with Fabric Loader and Fabric API.  
+It supports Minecraft 1.21+ with NeoForge.  
 
-It will support Forge, NeoForge, Quilt as mod loader in the future.
+It will support Forge, Quilt as mod loader in the future.
 
 Usage: Type `/mcfetch` in the console after joining a world.
 
