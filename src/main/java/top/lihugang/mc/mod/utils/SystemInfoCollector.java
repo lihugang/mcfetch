@@ -1,4 +1,4 @@
-package top.lihugang.mc.mod.client.utils;
+package top.lihugang.mc.mod.utils;
 
 import java.awt.*;
 import java.util.AbstractMap;

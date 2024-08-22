@@ -1,4 +1,4 @@
-package top.lihugang.mc.mod.client.utils;
+package top.lihugang.mc.mod.utils;
 
 public class memoryFormatter {
     public static String format(long size) {
